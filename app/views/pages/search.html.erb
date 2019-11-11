@@ -1,0 +1,5 @@
+<h1>Searched restaurants</h1>
+
+<% @selected_restaurants.each_value do |restaurant| %>
+  <p><%= restaurant[:name] %> (<%= restaurant[:address] %>)</p>
+<% end %>

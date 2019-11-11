@@ -1,0 +1,13 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<form action="/search" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="restaurant_name">
+  <input type="submit">
+</form>
+
+<% @restaurants.each do |key, restaurant| %>
+   <%= link_to restaurant[:name], restaurant_path(key) %>
+  <br>
+<% end %>
